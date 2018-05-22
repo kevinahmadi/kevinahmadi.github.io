@@ -192,7 +192,6 @@ var startRace = function(element){
       },
       complete:function(){
         if(finished){
-          console.log(id+' WIN:'+newPercent+':'+totalWidth+':'+place);
           current.find('.p-place').text(ordinal(place));
           place++;
           current.find('.p-bar').css({
