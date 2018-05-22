@@ -285,10 +285,10 @@ textarea,input,select,button {
 	height:100%;
 }
 	.wrapper-top{
-		height:5%;
+
 	}
 	.wrapper-bottom{
-		height:95%;
+		height:100%;
 	}
 .dash-title{
 	position:relative;
