@@ -159,6 +159,9 @@ textarea,input,select,button {
 				background-color:#3498db;
 				color:#fff;
 			}
+			.input-team::placeholder{
+				color:#3498db;
+			}
 		.randomize-wrapper{
 			padding:10px 0;
 		}
