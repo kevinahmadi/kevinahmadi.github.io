@@ -313,7 +313,7 @@ textarea,input,select,button {
 		box-sizing: border-box;
     -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;
-		border:2px solid #fff;
+		border:2px solid rgba(255,255,255,0.8);
 	}
 	.field-start, .field-end{
 		width:10%;
@@ -325,7 +325,7 @@ textarea,input,select,button {
 		background-image:url('../images/sprites/field-logo.png');
 		background-repeat:no-repeat;
 		background-position:center center;
-		background-size:18%;
+		background-size:20%;
 	}
 		.field-five{
 			width:5%;
@@ -346,6 +346,7 @@ textarea,input,select,button {
 			.f-number, .f-number2, .f-topnumber, .f-topnumber2{
 				position:absolute;
 				font-size:28px;
+				color:rgba(255,255,255,0.8);
 			}
 				.f-number, .f-number2{
 					bottom:10%;
