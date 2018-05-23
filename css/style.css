@@ -1,0 +1,119 @@
+* {
+	margin:0;
+	padding:0;
+}
+html {
+	font-family: 'Raleway', 'RTRaleway', arial, helvetica, sans-serif;
+	text-rendering: optimizeLegibility;
+	color:#fff;
+}
+body {
+	font-size:100%;
+	background-color:#000;
+}
+html, body{
+	height:100%;
+}
+img {
+	border:0;
+	max-width:100%;
+}
+@keyframes link{
+	from {
+		color:#fff;
+		text-shadow:1px 0 0 #f80109,
+							-1px 0 0 #29f9fb;
+	}
+	to {
+		color:transparent;
+		text-shadow:2px 0 0 #f80109,
+								-2px 0 0 #29f9fb;
+	}
+}
+a:link, a:visited {
+	color:#fff;
+	text-decoration: none;
+	text-shadow:1.5px 0 0 #f80109,
+							-1.5px 0 0 #29f9fb;
+
+}
+a:hover {
+	text-decoration: none;
+	animation-name:link;
+	animation-duration:0.5s;
+	animation-iteration-count:infinite;
+	animation-direction:alternate;
+}
+textarea,input,select,button {
+
+}
+.clear-both {
+	clear:both;
+}
+
+
+/* FONTS */
+
+@font-face {
+  font-family: 'Material Icons';
+  font-style: normal;
+  font-weight: 400;
+  src: url('/font/MaterialIcons-Regular.eot'); /* For IE6-8 */
+  src: local('Material Icons'),
+    local('MaterialIcons-Regular'),
+    url('../font/MaterialIcons-Regular.woff2') format('woff2'),
+    url('../font/MaterialIcons-Regular.woff') format('woff'),
+    url('../font/MaterialIcons-Regular.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'RTRaleway';
+  font-style: normal;
+  font-weight: 400;
+  src: url('../font/rtraleway-regular-webfont.eot'),
+    	 url('../font/rtraleway-regular-webfont.woff2') format('woff2'),
+    	 url('../font/rtraleway-regular-webfont.woff') format('woff'),
+    	 url('../font/rtraleway-regular-webfont.ttf') format('truetype');
+}
+
+.material-icons {
+  font-family: 'Material Icons';
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px;
+  display: inline-block;
+  line-height: 1;
+  text-transform: none;
+  letter-spacing: normal;
+  word-wrap: normal;
+  white-space: nowrap;
+  direction: ltr;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  -moz-osx-font-smoothing: grayscale;
+  font-feature-settings: 'liga';
+}
+
+.main-wrapper{
+	width:100%;
+	height:100%;
+	position:relative;
+}
+	.main-photo{
+		width:100%;
+		padding-bottom:56.25%;
+		position:relative;
+		background-position:center center;
+		background-repeat:no-repeat;
+		background-size:cover;
+		margin:auto;
+		top:50%;
+		transform:translateY(-50%);
+	}
+		.main-title{
+			position:absolute;
+			font-size:18px;
+			bottom:40px;
+			width:80%;
+			padding:40px 10%;
+			background-color:rgba(0,0,0,0.6);
+		}
