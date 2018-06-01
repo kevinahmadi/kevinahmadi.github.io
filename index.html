@@ -3,28 +3,947 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 
 <head>
-  <title>Kevin Ahmadi</title>
-  <script type="text/javascript" src="js/jquery-1.11.3.min.js"></script>
-  <script type="text/javascript" src="js/function.js"></script>
-  <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
-  <link rel="stylesheet" href="css/style.css" type="text/css" />
-  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" />
-  <meta name="description" content="" />
-  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>100 Yard Dash</title>
+<script type="text/javascript" src="js/jquery-1.11.3.min.js"></script>
+<script type="text/javascript" src="js/function.min.js"></script>
+<link href="https://fonts.googleapis.com/css?family=Domine:700" rel="stylesheet">
+<link rel="stylesheet" href="css/style.min.css" type="text/css" />
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" />
+<meta name="description" content="" />
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 </head>
 
 <body>
 
-  <div class="main-wrapper">
-    <div class="main-photo" style="background-image:url('../images/title.jpg');">
-      <div class="main-title">
-        My name is Kevin Ahmadi. I write and perform in the California pop-rock group, <a href="http://thestereophones.com" target="_blank">The Stereophones</a>. I'm also a fantasy football god. This page serves no purpose. Thanks for visiting.<br /><br />
+  <div class="dash-wrapper">
 
-        <a href="https://twitter.com/kevinahmadi" target="_blank">@kevinahmadi</a>
+    <div class="settings-box" style="display:none;">
+      <div class="settings-box-container">
+        <div class="settings-numteams settings-1" style="display:none;">
+          <div class="settings-title">
+            <p class="settings-title2">How many teams are in your league?</p>
+          </div>
+          <div class="numteams-select">
+            <div class="select-number">6</div>
+            <div class="select-number">8</div>
+            <div class="select-number">10</div>
+            <div class="select-number selected">12</div>
+            <div class="select-number">14</div>
+            <div class="select-number">16</div>
+            <div class="select-number">18</div>
+            <div class="select-number">20</div>
+          </div>
+          <div class="settings-navigate">
+            <div class="settings-navigate">
+              <div class="navigate-wrapper">
+              </div>
+              <div class="navigate-wrapper">
+                <a href="javascript:void(0);" class="settings-next">next &rarr;</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="settings-teamsinput settings-2">
+          <div class="settings-imgswitch">
+            <div class="imgswitch-title">Custom Images?<i class="material-icons tooltip mi-help" title="Custom images must be a direct link to the image (e.g., ending in .jpg or .png). Uploading images are not supported at this time.">help_outline</i></div>
+            <div class="imgswitch-option imgswitch-on">On</div>
+            <div class="imgswitch-option imgswitch-off selected">Off</div>
+          </div>
+          <div class="settings-title">
+            <p class="settings-title2">Write all manager's names in the boxes below.</p>
+          </div>
+          <div class="teamsinput-container">
+
+
+          </div>
+          <div class="settings-navigate">
+            <div class="navigate-wrapper">
+              <a href="javascript:void(0);" class="settings-back">&larr; back</a>
+            </div>
+            <div class="navigate-wrapper">
+              <a href="javascript:void(0);" class="settings-next settings-style">next &rarr;</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="settings-randomize settings-3">
+          <div class="settings-shufflercode">
+            <div class="shufflercode-option shufflercode-random selected">Random Dash</div>
+            <div class="shufflercode-option shufflercode-code">Code Dash</div><i class="material-icons tooltip mi-help" title="Random Dash is completely randomly generated. Code Dash will have each manager pick a word, phrase, whatever, which will be encoded to create the run speed. Spaces will be removed, empty fields will be filled with a random code, max 20 characters.">help_outline</i>
+          </div>
+          <div class="settings-shuffler">
+            <div class="settings-title">
+              <p class="settings-title2">Press the shuffle button below as many times as you wish for ultimate randomization.</p>
+            </div>
+            <div class="randomize-wrapper">
+              <div class="randomize-button">
+                <button class="button-random"><i class="material-icons mi-shuffle">shuffle</i></button>
+              </div>
+              <div class="randomize-total">
+                <p class="total-tag1">Shuffled</p>
+                <p class="total-shuffles">0</p>
+                <p class="total-tag2">times</p>
+              </div>
+            </div>
+          </div>
+          <div class="settings-code">
+            <div class="code-container">
+
+            </div>
+          </div>
+          <div class="settings-navigate">
+            <div class="navigate-wrapper">
+              <a href="javascript:void(0);" class="settings-back settings-reverse-order">&larr; back</a>
+            </div>
+            <div class="navigate-wrapper">
+              <a href="javascript:void(0);" class="settings-next settings-code-fill">next &rarr;</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="settings-values settings-4">
+          <div class="settings-title">
+            <p class="settings-title2">Yards travelled per turn.</p>
+          </div>
+          <div class="range">
+            <div class="range-stack range-toggle">
+              <div class="range-row">Min</div>
+              <div class="range-row">
+                <div class="range-num yards-min selected">1</div>
+                <div class="range-num yards-min">2</div>
+                <div class="range-num yards-min">3</div>
+                <div class="range-num yards-min">4</div>
+                <div class="range-num yards-min">5</div>
+              </div>
+            </div>
+            <div class="range-stack range-toggle">
+              <div class="range-row">Max</div>
+              <div class="range-row">
+                <div class="range-num yards-max">6</div>
+                <div class="range-num yards-max">7</div>
+                <div class="range-num yards-max">8</div>
+                <div class="range-num yards-max">9</div>
+                <div class="range-num yards-max selected">10</div>
+              </div>
+            </div>
+          </div>
+          <div class="settings-title">
+            <p class="settings-title2 title-margin">Seconds per turn.</p>
+          </div>
+          <div class="range">
+            <div class="range-stack range-toggle">
+              <div class="range-row">Min</div>
+              <div class="range-row">
+                <div class="range-num seconds-min">1</div>
+                <div class="range-num seconds-min selected">2</div>
+                <div class="range-num seconds-min">3</div>
+                <div class="range-num seconds-min">4</div>
+              </div>
+            </div>
+            <div class="range-stack range-toggle">
+              <div class="range-row">Max</div>
+              <div class="range-row">
+                <div class="range-num seconds-max">5</div>
+                <div class="range-num seconds-max">6</div>
+                <div class="range-num seconds-max selected">7</div>
+                <div class="range-num seconds-max">8</div>
+              </div>
+            </div>
+          </div>
+          <div class="settings-title">
+            <p class="settings-title2 title-margin">Speed adjuster.</p>
+          </div>
+          <div class="range">
+            <div class="range-stack">
+              <div class="range-row">
+                <div class="range-num range-speed selected">Normal</div>
+                <div class="range-num range-speed tooltip" title="Yards per turn x2.">Fast</div>
+                <div class="range-num range-speed tooltip" title="Yards x2 & seconds per turn 1/2.">Faster</div>
+                <div class="range-num range-speed tooltip" title="Yards x3 & seconds 1/3">Fastest</div>
+              </div>
+            </div>
+          </div>
+          <div class="settings-navigate">
+            <div class="navigate-wrapper">
+              <a href="javascript:void(0);" class="settings-back">&larr; back</a>
+            </div>
+            <div class="navigate-wrapper">
+              <a href="javascript:void(0);" class="settings-next settings-compile">next &rarr;</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="settings-start settings-5" style="display:none;">
+          <div class="settings-title">
+            <p class="settings-title2">When you're ready...</p>
+          </div>
+          <div class="start-button">
+            <button class="button-start">Start Dash</button>
+          </div>
+          <div class="share-container">
+            <div class="settings-title">
+              <p class="settings-title3">Quick settings link.<i class="material-icons tooltip mi-help" title="Use this link to automatically set manager names and dash settings.">help_outline</i></p>
+            </div>
+            <div class="url-wrapper">
+              <input type="text" class="settings-link settings-url" /><button class="copy-link copy-url"><i class="material-icons mi-copy">filter_none</i>Copy</button>
+            </div>
+          </div>
+          <div class="settings-navigate">
+
+            <div class="navigate-wrapper">
+              <a href="javascript:void(0);" class="settings-back">&larr; back</a>
+            </div>
+            <div class="navigate-wrapper">
+            </div>
+          </div>
+        </div>
+
+        <div class="settings-goodluck">
+          <p class="settings-tag">Good luck!</p>
+        </div>
+
+        <div class="settings-share">
+          <div class="placements">
+
+          </div>
+          <div class="share-container">
+            <p class="settings-title4">Share the link below with your league to watch the replay of this dash.</p>
+            <input type="text" class="settings-link settings-replay" /><button class="copy-link copy-replay"><i class="material-icons mi-copy">filter_none</i>Copy</button>
+          </div>
+        </div>
       </div>
     </div>
-  </div>
 
+    <div class="countdown-box">
+
+      <div class="countdown-number countdown-3">3</div>
+      <div class="countdown-number countdown-2">2</div>
+      <div class="countdown-number countdown-1">1</div>
+
+    </div>
+
+    <div class="wrapper">
+      <div class="wrapper-top">
+
+      </div>
+      <div class="wrapper-bottom">
+        <div class="field-container">
+          <div class="field-start"></div>
+          <div class="field-center">
+            <div class="p-wrapper">
+              <div class="p-hold">
+                <div class="p-container">
+
+                  <div class="p-bar-outside">
+                    <div class="p-bar p-1">
+                      <div class="p-name p-name0"></div>
+                    </div>
+
+                  </div>
+                  <div class="p-place-container">
+                    <div class="p-place"></div>
+                  </div>
+                </div>
+                <div class="p-container">
+
+                  <div class="p-bar-outside">
+                    <div class="p-bar p-2">
+                      <div class="p-name p-name1"></div>
+                    </div>
+                  </div>
+                  <div class="p-place-container">
+                    <div class="p-place"></div>
+                  </div>
+                </div>
+                <div class="p-container">
+
+                  <div class="p-bar-outside">
+                    <div class="p-bar p-3">
+                      <div class="p-name p-name2"></div>
+                    </div>
+                  </div>
+                  <div class="p-place-container">
+                    <div class="p-place"></div>
+                  </div>
+                </div>
+                <div class="p-container">
+
+                  <div class="p-bar-outside">
+                    <div class="p-bar p-4">
+                      <div class="p-name p-name3"></div>
+                    </div>
+                  </div>
+                  <div class="p-place-container">
+                    <div class="p-place"></div>
+                  </div>
+                </div>
+                <div class="p-container">
+
+                  <div class="p-bar-outside">
+                    <div class="p-bar p-5">
+                      <div class="p-name p-name4"></div>
+                    </div>
+                  </div>
+                  <div class="p-place-container">
+                    <div class="p-place"></div>
+                  </div>
+                </div>
+                <div class="p-container">
+
+                  <div class="p-bar-outside">
+                    <div class="p-bar p-6">
+                      <div class="p-name p-name5"></div>
+                    </div>
+                  </div>
+                  <div class="p-place-container">
+                    <div class="p-place"></div>
+                  </div>
+                </div>
+                <div class="p-container">
+
+                  <div class="p-bar-outside">
+                    <div class="p-bar p-7">
+                      <div class="p-name p-name6"></div>
+                    </div>
+                  </div>
+                  <div class="p-place-container">
+                    <div class="p-place"></div>
+                  </div>
+                </div>
+                <div class="p-container">
+
+                  <div class="p-bar-outside">
+                    <div class="p-bar p-8">
+                      <div class="p-name p-name7"></div>
+                    </div>
+                  </div>
+                  <div class="p-place-container">
+                    <div class="p-place"></div>
+                  </div>
+                </div>
+                <div class="p-container">
+
+                  <div class="p-bar-outside">
+                    <div class="p-bar p-9">
+                      <div class="p-name p-name8"></div>
+                    </div>
+                  </div>
+                  <div class="p-place-container">
+                    <div class="p-place"></div>
+                  </div>
+                </div>
+                <div class="p-container">
+
+                  <div class="p-bar-outside">
+                    <div class="p-bar p-10">
+                      <div class="p-name p-name9"></div>
+                    </div>
+                  </div>
+                  <div class="p-place-container">
+                    <div class="p-place"></div>
+                  </div>
+                </div>
+                <div class="p-container">
+
+                  <div class="p-bar-outside">
+                    <div class="p-bar p-11">
+                      <div class="p-name p-name10"></div>
+                    </div>
+                  </div>
+                  <div class="p-place-container">
+                    <div class="p-place"></div>
+                  </div>
+                </div>
+                <div class="p-container">
+
+                  <div class="p-bar-outside">
+                    <div class="p-bar p-12">
+                      <div class="p-name p-name11"></div>
+                    </div>
+                  </div>
+                  <div class="p-place-container">
+                    <div class="p-place"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+
+
+
+
+
+            <div class="field-five f-5">
+              <div class="f-marker-container-a">
+                <div class="f-m"></div>
+                <div class="f-m"></div>
+                <div class="f-m"></div>
+                <div class="f-m"></div>
+              </div>
+              <div class="f-marker-container-b">
+                <div class="f-m"></div>
+                <div class="f-m"></div>
+                <div class="f-m"></div>
+                <div class="f-m"></div>
+              </div>
+              <div class="f-marker-container-c">
+                <div class="f-m"></div>
+                <div class="f-m"></div>
+                <div class="f-m"></div>
+                <div class="f-m"></div>
+              </div>
+              <div class="f-marker-container-d">
+                <div class="f-m"></div>
+                <div class="f-m"></div>
+                <div class="f-m"></div>
+                <div class="f-m"></div>
+              </div>
+              <div class="f-marker-container-e">
+                <div class="f-m2"></div>
+              </div>
+            </div>
+            <div class="field-five f-10">
+              <div class="f-marker-container-a">
+                <div class="f-m"></div>
+                <div class="f-m"></div>
+                <div class="f-m"></div>
+                <div class="f-m"></div>
+              </div>
+              <div class="f-marker-container-b">
+                <div class="f-m"></div>
+                <div class="f-m"></div>
+                <div class="f-m"></div>
+                <div class="f-m"></div>
+              </div>
+              <div class="f-marker-container-c">
+                <div class="f-m"></div>
+                <div class="f-m"></div>
+                <div class="f-m"></div>
+                <div class="f-m"></div>
+              </div>
+              <div class="f-marker-container-d">
+                <div class="f-m"></div>
+                <div class="f-m"></div>
+                <div class="f-m"></div>
+                <div class="f-m"></div>
+              </div>
+              <div class="f-topnumber f-rbarrow">0</div>
+              <div class="f-number f-lbarrow">1</div>
+            </div>
+            <div class="field-five f-15">
+              <div class="f-marker-container-a">
+                <div class="f-m"></div>
+                <div class="f-m"></div>
+                <div class="f-m"></div>
+                <div class="f-m"></div>
+              </div>
+              <div class="f-marker-container-b">
+                <div class="f-m"></div>
+                <div class="f-m"></div>
+                <div class="f-m"></div>
+                <div class="f-m"></div>
+              </div>
+              <div class="f-marker-container-c">
+                <div class="f-m"></div>
+                <div class="f-m"></div>
+                <div class="f-m"></div>
+                <div class="f-m"></div>
+              </div>
+              <div class="f-marker-container-d">
+                <div class="f-m"></div>
+                <div class="f-m"></div>
+                <div class="f-m"></div>
+                <div class="f-m"></div>
+              </div>
+              <div class="f-topnumber2">1</div>
+              <div class="f-number2">0</div>
+            </div>
+            <div class="field-five f-20">
+              <div class="f-marker-container-a">
+                <div class="f-m"></div>
+                <div class="f-m"></div>
+                <div class="f-m"></div>
+                <div class="f-m"></div>
+              </div>
+              <div class="f-marker-container-b">
+                <div class="f-m"></div>
+                <div class="f-m"></div>
+                <div class="f-m"></div>
+                <div class="f-m"></div>
+              </div>
+              <div class="f-marker-container-c">
+                <div class="f-m"></div>
+                <div class="f-m"></div>
+                <div class="f-m"></div>
+                <div class="f-m"></div>
+              </div>
+              <div class="f-marker-container-d">
+                <div class="f-m"></div>
+                <div class="f-m"></div>
+                <div class="f-m"></div>
+                <div class="f-m"></div>
+              </div>
+              <div class="f-topnumber f-rbarrow">0</div>
+              <div class="f-number f-lbarrow">2</div>
+            </div>
+            <div class="field-five f-25">
+              <div class="f-marker-container-a">
+                <div class="f-m"></div>
+                <div class="f-m"></div>
+                <div class="f-m"></div>
+                <div class="f-m"></div>
+              </div>
+              <div class="f-marker-container-b">
+                <div class="f-m"></div>
+                <div class="f-m"></div>
+                <div class="f-m"></div>
+                <div class="f-m"></div>
+              </div>
+              <div class="f-marker-container-c">
+                <div class="f-m"></div>
+                <div class="f-m"></div>
+                <div class="f-m"></div>
+                <div class="f-m"></div>
+              </div>
+              <div class="f-marker-container-d">
+                <div class="f-m"></div>
+                <div class="f-m"></div>
+                <div class="f-m"></div>
+                <div class="f-m"></div>
+              </div>
+              <div class="f-topnumber2">2</div>
+              <div class="f-number2">0</div>
+            </div>
+            <div class="field-five f-30">
+              <div class="f-marker-container-a">
+                <div class="f-m"></div>
+                <div class="f-m"></div>
+                <div class="f-m"></div>
+                <div class="f-m"></div>
+              </div>
+              <div class="f-marker-container-b">
+                <div class="f-m"></div>
+                <div class="f-m"></div>
+                <div class="f-m"></div>
+                <div class="f-m"></div>
+              </div>
+              <div class="f-marker-container-c">
+                <div class="f-m"></div>
+                <div class="f-m"></div>
+                <div class="f-m"></div>
+                <div class="f-m"></div>
+              </div>
+              <div class="f-marker-container-d">
+                <div class="f-m"></div>
+                <div class="f-m"></div>
+                <div class="f-m"></div>
+                <div class="f-m"></div>
+              </div>
+              <div class="f-topnumber f-rbarrow">0</div>
+              <div class="f-number f-lbarrow">3</div>
+            </div>
+            <div class="field-five f-35">
+              <div class="f-marker-container-a">
+                <div class="f-m"></div>
+                <div class="f-m"></div>
+                <div class="f-m"></div>
+                <div class="f-m"></div>
+              </div>
+              <div class="f-marker-container-b">
+                <div class="f-m"></div>
+                <div class="f-m"></div>
+                <div class="f-m"></div>
+                <div class="f-m"></div>
+              </div>
+              <div class="f-marker-container-c">
+                <div class="f-m"></div>
+                <div class="f-m"></div>
+                <div class="f-m"></div>
+                <div class="f-m"></div>
+              </div>
+              <div class="f-marker-container-d">
+                <div class="f-m"></div>
+                <div class="f-m"></div>
+                <div class="f-m"></div>
+                <div class="f-m"></div>
+              </div>
+              <div class="f-topnumber2">3</div>
+              <div class="f-number2">0</div>
+            </div>
+            <div class="field-five f-40">
+              <div class="f-marker-container-a">
+                <div class="f-m"></div>
+                <div class="f-m"></div>
+                <div class="f-m"></div>
+                <div class="f-m"></div>
+              </div>
+              <div class="f-marker-container-b">
+                <div class="f-m"></div>
+                <div class="f-m"></div>
+                <div class="f-m"></div>
+                <div class="f-m"></div>
+              </div>
+              <div class="f-marker-container-c">
+                <div class="f-m"></div>
+                <div class="f-m"></div>
+                <div class="f-m"></div>
+                <div class="f-m"></div>
+              </div>
+              <div class="f-marker-container-d">
+                <div class="f-m"></div>
+                <div class="f-m"></div>
+                <div class="f-m"></div>
+                <div class="f-m"></div>
+              </div>
+              <div class="f-topnumber f-rbarrow">0</div>
+              <div class="f-number f-lbarrow">4</div>
+            </div>
+            <div class="field-five f-45">
+              <div class="f-marker-container-a">
+                <div class="f-m"></div>
+                <div class="f-m"></div>
+                <div class="f-m"></div>
+                <div class="f-m"></div>
+              </div>
+              <div class="f-marker-container-b">
+                <div class="f-m"></div>
+                <div class="f-m"></div>
+                <div class="f-m"></div>
+                <div class="f-m"></div>
+              </div>
+              <div class="f-marker-container-c">
+                <div class="f-m"></div>
+                <div class="f-m"></div>
+                <div class="f-m"></div>
+                <div class="f-m"></div>
+              </div>
+              <div class="f-marker-container-d">
+                <div class="f-m"></div>
+                <div class="f-m"></div>
+                <div class="f-m"></div>
+                <div class="f-m"></div>
+              </div>
+              <div class="f-topnumber2">4</div>
+              <div class="f-number2">0</div>
+            </div>
+            <div class="field-five f-50">
+              <div class="f-marker-container-a">
+                <div class="f-m"></div>
+                <div class="f-m"></div>
+                <div class="f-m"></div>
+                <div class="f-m"></div>
+              </div>
+              <div class="f-marker-container-b">
+                <div class="f-m"></div>
+                <div class="f-m"></div>
+                <div class="f-m"></div>
+                <div class="f-m"></div>
+              </div>
+              <div class="f-marker-container-c">
+                <div class="f-m"></div>
+                <div class="f-m"></div>
+                <div class="f-m"></div>
+                <div class="f-m"></div>
+              </div>
+              <div class="f-marker-container-d">
+                <div class="f-m"></div>
+                <div class="f-m"></div>
+                <div class="f-m"></div>
+                <div class="f-m"></div>
+              </div>
+              <div class="f-topnumber">0</div>
+              <div class="f-number">5</div>
+            </div>
+            <div class="field-five f-55">
+              <div class="f-marker-container-a">
+                <div class="f-m"></div>
+                <div class="f-m"></div>
+                <div class="f-m"></div>
+                <div class="f-m"></div>
+              </div>
+              <div class="f-marker-container-b">
+                <div class="f-m"></div>
+                <div class="f-m"></div>
+                <div class="f-m"></div>
+                <div class="f-m"></div>
+              </div>
+              <div class="f-marker-container-c">
+                <div class="f-m"></div>
+                <div class="f-m"></div>
+                <div class="f-m"></div>
+                <div class="f-m"></div>
+              </div>
+              <div class="f-marker-container-d">
+                <div class="f-m"></div>
+                <div class="f-m"></div>
+                <div class="f-m"></div>
+                <div class="f-m"></div>
+              </div>
+              <div class="f-topnumber2">5</div>
+              <div class="f-number2">0</div>
+            </div>
+            <div class="field-five f-60">
+              <div class="f-marker-container-a">
+                <div class="f-m"></div>
+                <div class="f-m"></div>
+                <div class="f-m"></div>
+                <div class="f-m"></div>
+              </div>
+              <div class="f-marker-container-b">
+                <div class="f-m"></div>
+                <div class="f-m"></div>
+                <div class="f-m"></div>
+                <div class="f-m"></div>
+              </div>
+              <div class="f-marker-container-c">
+                <div class="f-m"></div>
+                <div class="f-m"></div>
+                <div class="f-m"></div>
+                <div class="f-m"></div>
+              </div>
+              <div class="f-marker-container-d">
+                <div class="f-m"></div>
+                <div class="f-m"></div>
+                <div class="f-m"></div>
+                <div class="f-m"></div>
+              </div>
+              <div class="f-topnumber">0</div>
+              <div class="f-number">4</div>
+            </div>
+            <div class="field-five f-65">
+              <div class="f-marker-container-a">
+                <div class="f-m"></div>
+                <div class="f-m"></div>
+                <div class="f-m"></div>
+                <div class="f-m"></div>
+              </div>
+              <div class="f-marker-container-b">
+                <div class="f-m"></div>
+                <div class="f-m"></div>
+                <div class="f-m"></div>
+                <div class="f-m"></div>
+              </div>
+              <div class="f-marker-container-c">
+                <div class="f-m"></div>
+                <div class="f-m"></div>
+                <div class="f-m"></div>
+                <div class="f-m"></div>
+              </div>
+              <div class="f-marker-container-d">
+                <div class="f-m"></div>
+                <div class="f-m"></div>
+                <div class="f-m"></div>
+                <div class="f-m"></div>
+              </div>
+              <div class="f-topnumber2 f-lbarrow">4</div>
+              <div class="f-number2 f-rbarrow">0</div>
+            </div>
+            <div class="field-five f-70">
+              <div class="f-marker-container-a">
+                <div class="f-m"></div>
+                <div class="f-m"></div>
+                <div class="f-m"></div>
+                <div class="f-m"></div>
+              </div>
+              <div class="f-marker-container-b">
+                <div class="f-m"></div>
+                <div class="f-m"></div>
+                <div class="f-m"></div>
+                <div class="f-m"></div>
+              </div>
+              <div class="f-marker-container-c">
+                <div class="f-m"></div>
+                <div class="f-m"></div>
+                <div class="f-m"></div>
+                <div class="f-m"></div>
+              </div>
+              <div class="f-marker-container-d">
+                <div class="f-m"></div>
+                <div class="f-m"></div>
+                <div class="f-m"></div>
+                <div class="f-m"></div>
+              </div>
+              <div class="f-topnumber">0</div>
+              <div class="f-number">3</div>
+            </div>
+            <div class="field-five f-75">
+              <div class="f-marker-container-a">
+                <div class="f-m"></div>
+                <div class="f-m"></div>
+                <div class="f-m"></div>
+                <div class="f-m"></div>
+              </div>
+              <div class="f-marker-container-b">
+                <div class="f-m"></div>
+                <div class="f-m"></div>
+                <div class="f-m"></div>
+                <div class="f-m"></div>
+              </div>
+              <div class="f-marker-container-c">
+                <div class="f-m"></div>
+                <div class="f-m"></div>
+                <div class="f-m"></div>
+                <div class="f-m"></div>
+              </div>
+              <div class="f-marker-container-d">
+                <div class="f-m"></div>
+                <div class="f-m"></div>
+                <div class="f-m"></div>
+                <div class="f-m"></div>
+              </div>
+              <div class="f-topnumber2 f-lbarrow">3</div>
+              <div class="f-number2 f-rbarrow">0</div>
+            </div>
+            <div class="field-five f-80">
+              <div class="f-marker-container-a">
+                <div class="f-m"></div>
+                <div class="f-m"></div>
+                <div class="f-m"></div>
+                <div class="f-m"></div>
+              </div>
+              <div class="f-marker-container-b">
+                <div class="f-m"></div>
+                <div class="f-m"></div>
+                <div class="f-m"></div>
+                <div class="f-m"></div>
+              </div>
+              <div class="f-marker-container-c">
+                <div class="f-m"></div>
+                <div class="f-m"></div>
+                <div class="f-m"></div>
+                <div class="f-m"></div>
+              </div>
+              <div class="f-marker-container-d">
+                <div class="f-m"></div>
+                <div class="f-m"></div>
+                <div class="f-m"></div>
+                <div class="f-m"></div>
+              </div>
+              <div class="f-topnumber">0</div>
+              <div class="f-number">2</div>
+            </div>
+            <div class="field-five f-85">
+              <div class="f-marker-container-a">
+                <div class="f-m"></div>
+                <div class="f-m"></div>
+                <div class="f-m"></div>
+                <div class="f-m"></div>
+              </div>
+              <div class="f-marker-container-b">
+                <div class="f-m"></div>
+                <div class="f-m"></div>
+                <div class="f-m"></div>
+                <div class="f-m"></div>
+              </div>
+              <div class="f-marker-container-c">
+                <div class="f-m"></div>
+                <div class="f-m"></div>
+                <div class="f-m"></div>
+                <div class="f-m"></div>
+              </div>
+              <div class="f-marker-container-d">
+                <div class="f-m"></div>
+                <div class="f-m"></div>
+                <div class="f-m"></div>
+                <div class="f-m"></div>
+              </div>
+              <div class="f-topnumber2 f-lbarrow">2</div>
+              <div class="f-number2 f-rbarrow">0</div>
+            </div>
+            <div class="field-five f-90">
+              <div class="f-marker-container-a">
+                <div class="f-m"></div>
+                <div class="f-m"></div>
+                <div class="f-m"></div>
+                <div class="f-m"></div>
+              </div>
+              <div class="f-marker-container-b">
+                <div class="f-m"></div>
+                <div class="f-m"></div>
+                <div class="f-m"></div>
+                <div class="f-m"></div>
+              </div>
+              <div class="f-marker-container-c">
+                <div class="f-m"></div>
+                <div class="f-m"></div>
+                <div class="f-m"></div>
+                <div class="f-m"></div>
+              </div>
+              <div class="f-marker-container-d">
+                <div class="f-m"></div>
+                <div class="f-m"></div>
+                <div class="f-m"></div>
+                <div class="f-m"></div>
+              </div>
+              <div class="f-topnumber">0</div>
+              <div class="f-number">1</div>
+            </div>
+            <div class="field-five f-95">
+              <div class="f-marker-container-a">
+                <div class="f-m"></div>
+                <div class="f-m"></div>
+                <div class="f-m"></div>
+                <div class="f-m"></div>
+              </div>
+              <div class="f-marker-container-b">
+                <div class="f-m"></div>
+                <div class="f-m"></div>
+                <div class="f-m"></div>
+                <div class="f-m"></div>
+              </div>
+              <div class="f-marker-container-c">
+                <div class="f-m"></div>
+                <div class="f-m"></div>
+                <div class="f-m"></div>
+                <div class="f-m"></div>
+              </div>
+              <div class="f-marker-container-d">
+                <div class="f-m"></div>
+                <div class="f-m"></div>
+                <div class="f-m"></div>
+                <div class="f-m"></div>
+              </div>
+              <div class="f-topnumber2 f-lbarrow">1</div>
+              <div class="f-number2 f-rbarrow">0</div>
+            </div>
+            <div class="field-five f-100">
+              <div class="f-marker-container-a">
+                <div class="f-m"></div>
+                <div class="f-m"></div>
+                <div class="f-m"></div>
+                <div class="f-m"></div>
+              </div>
+              <div class="f-marker-container-b">
+                <div class="f-m"></div>
+                <div class="f-m"></div>
+                <div class="f-m"></div>
+                <div class="f-m"></div>
+              </div>
+              <div class="f-marker-container-c">
+                <div class="f-m"></div>
+                <div class="f-m"></div>
+                <div class="f-m"></div>
+                <div class="f-m"></div>
+              </div>
+              <div class="f-marker-container-d">
+                <div class="f-m"></div>
+                <div class="f-m"></div>
+                <div class="f-m"></div>
+                <div class="f-m"></div>
+              </div>
+              <div class="f-marker-container-e">
+                <div class="f-m3"></div>
+              </div>
+            </div>
+          </div>
+          <div class="field-end"></div>
+        </div>
+      </div>
+
+
+    </div>
+  </div>
 
 </body>
 </html>
