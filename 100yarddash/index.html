@@ -28,6 +28,48 @@
   <div class="dash-wrapper">
 
     <div class="settings-box" style="display:none;">
+      <div class="about-toggle"><i class="material-icons mi-help-toggle">help</i></div>
+      <div class="settings-about" style="display:none;">
+        <div>
+          <h4>About 100 Yard Dash</h4>
+          <p>100 Yard Dash is a random visualizer intended to help decide the draft order for your fantasy football league. There are two modes of Dashes to run (Random Dash and Code Dash), plus several customization options.</p>
+        </div>
+
+        <div>
+          <h4>Random Dash</h4>
+          <p>Each runner will rush between a minimum and maximum number of yards each rush, and each rush will last between a minimum and maximum number of seconds, and will then rush again at the end of the rush until they reach the endzone. For example, a runner could rush for 10 yards in 1 second giving them a big lead, or 1 yard in 8 seconds which will set them back.</p>
+        </div>
+
+        <div>
+          <h4>Code Dash</h4>
+          <p>Each runner will select a code, word, or phrase made up of a maximum of 20 letters, numbers, or characters. This code will then be converted into a series of rushes that each runner will rush. Now the randomness is in your hands, so choose your codes wisely.</p>
+        </div>
+
+        <div>
+          <h4>Custom Images</h4>
+          <p>Adding custom images will replace the rusher sprite with your linked image. Images must be a direct link to your image (links should end in .jpg, .png, or .gif). Shorter URLs are recommended to ensure a replay code is created. Squared 1:1 ratio images work best.</p>
+        </div>
+
+        <div>
+          <h4>Speed</h4>
+          <p>There are four speed options to choose from.</p>
+          <p><span>Normal</span> - Yards and seconds per rush are standard.</p>
+          <p><span>Fast</span> - Yards per rush are doubled, seconds per rush remain standard.</p>
+          <p><span>Faster</span> - Yards and per rush are doubled, seconds per rush are cut in half.</p>
+          <p><span>Fastest</span> - Yards per rush are tripled, seconds per rush are cut into a third.</p>
+        </div>
+
+        <div>
+          <h4>Luck</h4>
+          <p>The optional Luck modifier gives a 5% chance per Luck point of doubling their randomly rolled rush yards each turn. This can be used to give last season's last place manager a better chance of winning, or to give everyone a bit of Luck to mix-up the Dash!</p>
+        </div>
+
+        <div>
+          <h4>Settings and Replay Codes</h4>
+          <p>A quick settings URL will be presented before the Dash that can be used to save custom images, manager names, and Dash settings. A replay URL will be presented after the Dash to watch the Dash again or share with your league. URLs are capped at 8192 characters. If your league has 20 managers with custom images, codes, and luck activated, the URL might be too long to watch the replay.</p>
+        </div>
+
+      </div>
       <div class="settings-box-container">
         <div class="settings-numteams settings-1" style="display:none;">
           <div class="settings-teamswitch">
@@ -80,7 +122,7 @@
 
         <div class="settings-teamsinput settings-2">
           <div class="settings-imgswitch">
-            <div class="imgswitch-title">Custom Images?<i class="material-icons tooltip mi-help" title="Custom images must be a direct link to the image (e.g., ending in .jpg or .png). Uploading images are not supported at this time.">help_outline</i></div>
+            <div class="imgswitch-title">Custom Images?</div>
             <div class="imgswitch-option imgswitch-on">On</div>
             <div class="imgswitch-option imgswitch-off selected">Off</div>
           </div>
@@ -104,7 +146,7 @@
         <div class="settings-randomize settings-3">
           <div class="settings-shufflercode">
             <div class="shufflercode-option shufflercode-random selected">Random Dash</div>
-            <div class="shufflercode-option shufflercode-code">Code Dash</div><i class="material-icons tooltip mi-help" title="Random Dash is completely randomly generated. Code Dash will have each manager pick a word, phrase, whatever, which will be encoded to create the run speed. Spaces will be removed, empty fields will be filled with a random code, max 20 characters.">help_outline</i>
+            <div class="shufflercode-option shufflercode-code">Code Dash</div>
           </div>
           <div class="settings-shuffler">
             <div class="settings-title">
@@ -122,6 +164,10 @@
             </div>
           </div>
           <div class="settings-code">
+            <div class="settings-title">
+              <p class="settings-title2">Type or paste a word, phrase, or code into the boxes below for each manager.</p>
+              <p class="settings-title5">Spaces will be removed, long codes will be reduced to 20 characters, blank codes will be randomly generated.</p>
+            </div>
             <div class="code-container">
 
             </div>
@@ -136,7 +182,32 @@
           </div>
         </div>
 
-        <div class="settings-values settings-4">
+        <div class="settings-luck settings-4">
+          <div class="settings-luckswitch">
+            <div class="luckswitch-title">Unlock luck adjustment?</div>
+            <div class="luckswitch-option luckswitch-on">Yes</div>
+            <div class="luckswitch-option luckswitch-off selected">No</div>
+          </div>
+          <div class="luck-wrapper">
+            <div class="settings-title">
+              <p class="settings-title2">Higher Luck values give better chances of winning.</p>
+
+            </div>
+            <div class="luck-container">
+
+            </div>
+          </div>
+          <div class="settings-navigate">
+            <div class="navigate-wrapper">
+              <a href="javascript:void(0);" class="settings-back">&larr;</a>
+            </div>
+            <div class="navigate-wrapper">
+              <a href="javascript:void(0);" class="settings-next settings-count-luck">&rarr;</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="settings-values settings-5">
           <div class="settings-title">
             <p class="settings-title2">Yards travelled per rush.</p>
           </div>
@@ -186,15 +257,15 @@
             </div>
           </div>
           <div class="settings-title">
-            <p class="settings-title2 title-margin">Speed adjuster.</p>
+            <p class="settings-title2 title-margin">Speed.</p>
           </div>
           <div class="range">
             <div class="range-stack">
               <div class="range-row">
                 <div class="range-num range-speed selected">Normal</div>
-                <div class="range-num range-speed tooltip" title="Yards per rush x2.">Fast</div>
-                <div class="range-num range-speed tooltip" title="Yards x2 & seconds per rush 1/2.">Faster</div>
-                <div class="range-num range-speed tooltip" title="Yards x3 & seconds 1/3">Fastest</div>
+                <div class="range-num range-speed">Fast</div>
+                <div class="range-num range-speed">Faster</div>
+                <div class="range-num range-speed">Fastest</div>
               </div>
             </div>
           </div>
@@ -208,7 +279,10 @@
           </div>
         </div>
 
-        <div class="settings-start settings-5" style="display:none;">
+        <div class="settings-start settings-6" style="display:none;">
+          <div class="settings-recap">
+
+          </div>
           <div class="settings-title">
             <p class="settings-title2">When you're ready...</p>
           </div>
@@ -217,7 +291,7 @@
           </div>
           <div class="share-container">
             <div class="settings-title">
-              <p class="settings-title3">Quick settings link.<i class="material-icons tooltip mi-help" title="Use this link to automatically set manager names and dash settings.">help_outline</i></p>
+              <p class="settings-title3">Quick settings link.</p>
             </div>
             <div class="url-wrapper">
               <input type="text" class="settings-link settings-url" /><button class="copy-link copy-url"><i class="material-icons mi-copy">filter_none</i>Copy</button>
